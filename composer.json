@@ -1,16 +1,19 @@
 {
     "name": "bilogic/orchidexamples",
-    "description": ":package_description",
-    "license": "license",
+    "description": "Examples for the Rapid Application Development @orchidsoftware",
+    "license": "MIT",
     "authors": [
         {
-            "name": "author name",
-            "email": "author email",
-            "homepage": "author homepage"
+            "name": "bilogic",
+            "homepage": "https://github.com/bilogic"
         }
     ],
     "homepage": "https://github.com/bilogic/orchidexamples",
-    "keywords": ["Laravel", "OrchidExamples"],
+    "keywords": [
+        "Laravel",
+        "Orchid",
+        "Examples"
+    ],
     "require": {
         "illuminate/support": "~7|~8"
     },
