@@ -74,6 +74,30 @@ class OrchidExamplesServiceProvider extends OrchidServiceProvider
 
             });
 
+        {
+            { // add this code in BootCrudGenerator.php middleware for auto discovery
+                // if (isset(app()['packageOrchidResources'])) {
+                //     $packageResources = [];
+                //     foreach (app()['packageOrchidResources'] as $namespace => $path) {
+                //         $packageResources = array_merge(
+                //             $packageResources,
+                //             $this->finder
+                //                 ->setNamespace($namespace . '\\Orchid\\Resources')
+                //                 ->find($path . '/Orchid/Resources'));
+                //     }
+                // }
+                // $this->arbitrator
+                //     ->resources(array_merge($resources, $packageResources))
+                //     ->boot();
+            }
+
+            $value = [];
+            if (isset(app()['packageOrchidResources'])) {
+                $value = app()->packageOrchidResources;
+            }
+            app()->packageOrchidResources = array_merge($value, ['Bilogic\\OrchidExamples' => __DIR__]);
+        }
+
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {
             $this->bootForConsole();

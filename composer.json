@@ -16,6 +16,7 @@
     ],
     "require": {
         "orchid\/platform": "^9.19",
+        "orchid\/crud": "^2.7",
         "orchid\/fortify": "^0.0.5",
         "illuminate\/support": "~7|~8"
     },
