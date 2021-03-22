@@ -2,6 +2,8 @@
 
 namespace Bilogic\OrchidExamples;
 
+use Bilogic\OrchidExamples\Orchid\Screens\DOMUpdateScreen;
+use Bilogic\OrchidExamples\Orchid\Screens\EmailSenderScreen;
 use Illuminate\Support\Facades\Route;
 use Orchid\Platform\Dashboard;
 use Orchid\Platform\ItemMenu;

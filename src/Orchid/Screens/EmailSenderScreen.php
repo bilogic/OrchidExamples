@@ -1,6 +1,6 @@
 <?php
 
-namespace Bilogic\OrchidExamples;
+namespace Bilogic\OrchidExamples\Orchid\Screens;
 
 use App\Models\User;
 use Auth;
