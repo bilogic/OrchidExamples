@@ -36,6 +36,14 @@ class AmountListener extends Listener
     {
         return [
             Layout::rows([
+                Input::make('a')
+                    ->title('First argument')
+                    ->type('number'),
+
+                Input::make('b')
+                    ->title('Second argument')
+                    ->type('number'),
+
                 Input::make('sum')
                 // ->readonly()
                     ->canSee($this->query->has('sum')),

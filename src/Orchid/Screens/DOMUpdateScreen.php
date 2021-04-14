@@ -5,7 +5,6 @@ namespace Bilogic\OrchidExamples\Orchid\Screens;
 use Bilogic\OrchidExamples\AmountListener;
 // use Orchid\Screen\Fields\Quill;
 use Orchid\Screen\Actions\Button;
-use Orchid\Screen\Fields\Input;
 use Orchid\Screen\Screen;
 use Orchid\Support\Facades\Layout;
 
@@ -42,15 +41,6 @@ class DOMUpdateScreen extends Screen
     public function layout(): array
     {
         return [
-            Layout::rows([
-                Input::make('a')
-                    ->title('First argument')
-                    ->type('number'),
-
-                Input::make('b')
-                    ->title('Second argument')
-                    ->type('number'),
-            ]),
             AmountListener::class,
         ];
     }
@@ -62,10 +52,7 @@ class DOMUpdateScreen extends Screen
      */
     public function query(): array
     {
-        return [
-            'a' => 1,
-            'b' => 2,
-        ];
+        return [];
     }
 
     /**
@@ -85,6 +72,8 @@ class DOMUpdateScreen extends Screen
     public function asyncSum(int $a = null, int $b = null)
     {
         return [
+            'a' => $a,
+            'b' => $b,
             'sum' => $a + $b,
         ];
     }
