@@ -8,8 +8,8 @@ use Illuminate\Support\Facades\Route;
 use Orchid\Crud\Arbitrator;
 use Orchid\Crud\ResourceFinder;
 use Orchid\Platform\Dashboard;
-use Orchid\Platform\ItemMenu;
 use Orchid\Platform\OrchidServiceProvider;
+use Orchid\Screen\Actions\Menu;
 use Tabuna\Breadcrumbs\Trail;
 
 class OrchidExamplesServiceProvider extends OrchidServiceProvider
@@ -23,19 +23,31 @@ class OrchidExamplesServiceProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
-            ItemMenu::label('label() with badge()')
-                ->title('Orchid Examples - title()')
+            Menu::make('label() with badge()')
+                ->title('OrchidExamplesServiceProvider - title()')
                 ->icon('monitor')
                 ->badge(function () {
                     return 1;
                 }),
 
-            ItemMenu::label('1. Send email')
+            Menu::make('1. Send email')
                 ->route('platform.example.email')
                 ->icon('monitor'),
+            Menu::make('2. Test Menu Entry')
+                ->icon('monitor'),
 
-            ItemMenu::label('2. DOM Update')
-                ->route('platform.example.domupdate')
+            Menu::make('3. Test Menu Entry')
+                ->title('Title')
+                ->icon('monitor'),
+            Menu::make('4. Test Menu Entry')
+                ->icon('monitor'),
+            Menu::make('5. Test Menu Entry')
+                ->title('Title')
+                ->icon('monitor'),
+            Menu::make('6. Test Menu Entry')
+                ->title('Title')
+                ->icon('monitor'),
+            Menu::make('7. Test Menu Entry')
                 ->icon('monitor'),
         ];
     }

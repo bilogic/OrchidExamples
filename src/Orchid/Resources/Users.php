@@ -15,14 +15,14 @@ class Users extends Resource
      */
     public static $model = User::class;
 
-    // public static function label(): string
-    // {
-    //     return "Header of the page";
-    // }
+    public static function label(): string
+    {
+        return "<H1> of the page";
+    }
 
     public static function description(): ?string
     {
-        return "List of " . __CLASS__;
+        return "Text under the <H1> in the file of `" . __FILE__ . "`";
     }
 
     /**
@@ -65,6 +65,11 @@ class Users extends Resource
      * @return array
      */
     public function filters(): array
+    {
+        return [];
+    }
+
+    public function legend(): array
     {
         return [];
     }
